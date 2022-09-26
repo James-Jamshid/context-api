@@ -1,7 +1,11 @@
 import styled from "styled-components";
 import Toggle from "react-dark-mode-toggle";
+//reactdan toogle dark modeni ornatib oldik, Toggle nomini ozimiz berdik va hoxlagan belgini bersak  boladi.
+
 export const Switch = styled(Toggle)`
   margin-left: auto;
+  outline: none;
+  //keraksiz border paydo bolib qolsa outeline none bersa yoqoladi
 `;
 
 export const Container = styled.div`
@@ -24,6 +28,8 @@ export const MobContainer = styled.div`
   box-shadow: 5px 5px 12px 6px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   /* box-sizing: border-box; */
+  background: ${({ color }) => color};
+  //propdagi color qaday bolsa oshani ozini qoy degani
 `;
 export const IconCon = styled.div`
   display: flex;
@@ -32,13 +38,13 @@ export const IconCon = styled.div`
   box-sizing: border-box;
   //box-sizing berish karobgaga ovoladi va margin left auto berganda ozi avtomat joy tashidi
   .arrow {
-    color: black;
+    color: ${({ color }) => color};
     width: 30px;
     height: 30px;
     cursor: pointer;
   }
   .power {
-    color: black;
+    color: ${({ color }) => color};
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -69,18 +75,20 @@ export const ImgTitle = styled.div`
   font-size: 20px;
   font-style: bold;
   font-family: 5F Pro Display;
+  color: ${({ color }) => color};
 `;
 export const Desc = styled.div`
   font-size: 15px;
   font-style: bold;
   font-family: 5F Pro Display;
+  color: ${({ color }) => color};
 `;
 
 export const Item = styled.div`
   display: flex;
   padding: 10px 30px;
   .moon {
-    color: black;
+    color: ${({ color }) => color};
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -134,6 +142,7 @@ export const Title = styled.div`
   font-family: 5F Pro Display;
   cursor: pointer;
   padding-left: 10px;
+  color: ${({ color }) => color};
 `;
 export const IconDark = styled.div``;
 export const Line = styled.div`
